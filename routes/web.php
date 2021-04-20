@@ -19,4 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/movies', [MovieController::class, 'index']);
+
+Route::get('/movies/create', [MovieController::class, 'create']);
+Route::post('/movies', [MovieController::class, 'store']);
+
 Route::get('/movies/{movie}', [MovieController::class, 'show'])->name('movie');
